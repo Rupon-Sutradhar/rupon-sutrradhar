@@ -42,7 +42,7 @@ def hangman():
     if attempts == 0:
         print("💀 Game over! The word was:", word)
 
-    # Ask if user wants to play again
+    
     if input("\nDo you want to play again? (y/n): ").strip().lower() == 'y':
         hangman()
 

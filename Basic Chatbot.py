@@ -1,10 +1,10 @@
 import random
 import nltk
 
-# Download required NLTK data
-nltk.download('punkt')
+
+nltk.download('punkt_tab')
 nltk.download('averaged_perceptron_tagger')
-# Define chatbot responses
+nltk.download('popular')
 responses = {
     "greeting": ["Hello!", "Hi there!", "Greetings!"],
     "goodbye": ["Goodbye!", "See you later!", "Have a nice day!"],
@@ -19,8 +19,8 @@ def chat_bot():
             print("Chatbot: ", random.choice(responses["goodbye"]))
             break
         else:
-            tokens = http.word_tokenize(user_input)
-            pos_tags = http.pos_tag(tokens)
+            tokens = nltk.word_tokenize(user_input)
+            pos_tags = nltk.pos_tag(tokens)
             response = handle_input(pos_tags)
             print("Chatbot: ", response)
 
